@@ -1,8 +1,8 @@
 import React, { useState, useEffect, FormEvent } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch} from 'react-redux';
 import { Container, TextField, Button, Typography, CircularProgress, Avatar, Grid, Box, Tabs, Tab, CssBaseline, IconButton, InputAdornment } from '@mui/material';
 import { getMeService, updateMeService, updatePasswordService, deleteMeService } from '@/services/userService';
-import { RootState } from '@/redux/store';
+
 import { setUser, updateUser } from '@/redux/authSlice';
 import { styled } from '@mui/material/styles';
 import { keyframes } from '@emotion/react';
@@ -136,7 +136,7 @@ const avatarOptions = [
 
 const UserProfile = () => {
   const dispatch = useDispatch();
-  const user = useSelector((state: RootState) => state.auth.user);
+ 
   const [loading, setLoading] = useState(true);
   const [updating, setUpdating] = useState(false);
   const [formData, setFormData] = useState({
@@ -290,7 +290,7 @@ const UserProfile = () => {
     }
   };
 
-  const handleTabChange = (event: React.SyntheticEvent, newValue: number) => {
+  const handleTabChange = (_event: React.SyntheticEvent, newValue: number) => {
     setTabIndex(newValue);
   };
 

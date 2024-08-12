@@ -3,7 +3,7 @@ import { Box, Typography, Select, MenuItem, TextField, TableContainer, Paper, Ta
 import { styled } from '@mui/system';
 import { getAllUsers, User } from '@/services/GetAllUsersService';
 
-const StyledContainer = styled(Box)(({ theme }) => ({
+const StyledContainer = styled(Box)(({ }) => ({
   width: '376px',
   height: '794px',
   backgroundColor: '#2E2E2E',
