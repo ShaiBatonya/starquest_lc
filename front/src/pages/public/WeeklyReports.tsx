@@ -217,8 +217,7 @@ const handleRadioChange = (e: React.ChangeEvent<HTMLInputElement>) => {
   
   const handleSubmit = async () => {
     try {
-      const response = await createWeeklyReportService(inputs);
-      console.log('Response:', response);
+  
         console.log('Form submitted:', inputs);
         const isRadioValid = validateRadioInputs();
         if (isRadioValid) {
@@ -228,7 +227,8 @@ const handleRadioChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         schema.parse(inputs);
         setErrors({});
         console.log('Form submitted:', inputs);
-    
+        const response = await createWeeklyReportService(inputs);
+      console.log('Response:', response);
         setShowSuccessMessage(true);
     } catch (err) {
         if (err instanceof ZodError) {
