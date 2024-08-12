@@ -1,11 +1,11 @@
 import axios, { AxiosInstance } from 'axios';
 
 const axiosInstance: AxiosInstance = axios.create({
-  baseURL: 'http://localhost:6500/api',
+  baseURL: 'https://starquest-upload-production-a0cc.up.railway.app/api',
   headers: {
     'Content-Type': 'application/json',
   },
-   withCredentials: true
+  withCredentials: true
 });
 
-export default axiosInstance
+export default axiosInstance;
