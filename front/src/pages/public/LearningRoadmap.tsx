@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Box, Typography, Grid } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import roadmap from '@/assets/roadmap.jpeg';
@@ -20,7 +20,7 @@ const RoadmapCard = styled(Box)(({ theme }) => ({
   position: 'relative',
 }));
 
-const ImageBox = styled(Box)(({ theme }) => ({
+const ImageBox = styled(Box)(({ }) => ({
   width: '226px',
   height: '94px',
   gap: '0px',

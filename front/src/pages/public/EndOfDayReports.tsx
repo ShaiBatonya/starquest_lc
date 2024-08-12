@@ -5,7 +5,6 @@ import { TextField, Button } from '@mui/material';
 import sad from '@/assets/sad.png';
 import smile from '@/assets/smile.png';
 import Typography from '@mui/material/Typography';
-import FormControlLabel from '@mui/material/FormControlLabel';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -23,7 +22,7 @@ import Success from '@/assets/Success.png';
 import backgroundImage1 from '@/assets/backgroundImage1.jpeg';
 import reportstate from '@/assets/reportstate.png';
 import { Formik, Form } from 'formik';
-import { useDispatch } from 'react-redux';
+
 import { updateEndOfDayReportService } from '@/services/updateEndOfDayReportService';
 import { getLastDailyReportService } from '@/services/getAllDailyReportsService';
 
@@ -46,9 +45,9 @@ export const schema = z.object({
 });
 
 const EndOfDayReports = (): JSX.Element => {
-  const dispatch = useDispatch();
+
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
-  const [redirectToBackground, setRedirectToBackground] = useState(false);
+  const [redirectToBackground] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [radioErrors, setRadioErrors] = useState<Record<string, string>>({});
   const [inputs, setInputs] = useState({

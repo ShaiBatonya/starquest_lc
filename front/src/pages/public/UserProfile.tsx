@@ -18,7 +18,7 @@ import selfi1 from "@/assets/selfi1.png";
 import selfi2 from "@/assets/selfi2.png";
 import selfi3 from "@/assets/selfi3.png";
 import selfi5 from "@/assets/selfi5.png";
-import { User } from '@/typings/IndexTypes';
+
 import propilldhas from '@/assets/propilldhas.jpeg';
 
 const profileSchema = z.object({
